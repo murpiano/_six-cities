@@ -1,13 +1,13 @@
 import { Navigate, Outlet } from 'react-router-dom';
-import { AppRoute } from '../../../const';
+import { AppRoute, AuthStatus } from '../../../const';
 import { userSelectors } from '../../../store/slices/user-slice';
 import { useAppSelector } from '../../../hooks/store';
 
-const getRoute = (redirection: AppRoute) =>
+const getRoute = (status: AuthStatus, redirection: AppRoute) =>
   function AccessRoute() {
     const authStatus = useAppSelector(userSelectors.status);
     switch (authStatus) {
-      case authStatus:
+      case status:
         return <Outlet />;
       case 'UNKNOWN':
         return 'Loading...';
@@ -16,7 +16,7 @@ const getRoute = (redirection: AppRoute) =>
     }
   };
 
-const PrivateRoute = getRoute(AppRoute.Login);
-const PublicRoute = getRoute(AppRoute.Main);
+const PrivateRoute = getRoute(AuthStatus.Auth, AppRoute.Login);
+const PublicRoute = getRoute(AuthStatus.NoAuth, AppRoute.Main);
 
 export { PrivateRoute, PublicRoute };

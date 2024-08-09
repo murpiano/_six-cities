@@ -24,8 +24,8 @@ export function Map({ bemBlock, activeOffer, nearbyOffers }: MapProps) {
     bemBlock === 'cities'
       ? offers
       : nearbyOffers
-          .slice(0, MAX_NEARBY_OFFER_COUNT)
-          .concat([].push(activeOffer));
+        .slice(0, MAX_NEARBY_OFFER_COUNT)
+        .concat([].push(activeOffer));
   const correctLocation = adaptLocation(location);
   const mapRef = useRef(null);
   const map = useMap(mapRef, correctLocation);
