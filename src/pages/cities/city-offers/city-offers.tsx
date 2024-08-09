@@ -7,10 +7,9 @@ import {
 } from '../../../store/slices/active-slice';
 import { toSortOffers } from '../../../store/slices/offers-slice/offers-selectors';
 import { store } from '../../../store/store';
-import { fetchOfferAction } from '../../../store/api-actions/offers-actions/fetch-offer-action';
 import { ThumbnailOffer } from '../../../types/offer-type';
-import { fetchGetCommentsAction } from '../../../store/api-actions/comments-actions/fetch-comments-action';
-import { fetchOffersNearbyAction } from '../../../store/api-actions/offers-actions/fetch-offers-nearby-action';
+import { fetchGetCommentsAction } from '../../../store/api-actions/comments-actions';
+import { fetchOfferAction, fetchOffersNearbyAction } from '../../../store/api-actions/offers-actions';
 
 function CityOffers() {
   const city = useAppSelector(activeSelectors.city);

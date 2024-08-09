@@ -3,8 +3,8 @@ import { Header } from '../../components/header/header';
 import { useChangeTitle } from '../../hooks/title';
 import { useNavigate } from 'react-router-dom';
 import { dispatch } from '../../store/store';
-import { loginAction } from '../../store/api-actions/auth-actions.ts/login-action';
 import { AppRoute } from '../../const';
+import { loginAction } from '../../store/api-actions/auth-actions';
 
 function SignIn(): JSX.Element {
   useChangeTitle('Login');

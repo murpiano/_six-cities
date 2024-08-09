@@ -1,10 +1,10 @@
-import { FullOffer } from '../../types/offer-type';
+import { ThumbnailOffer } from '../../types/offer-type';
 
 type StructuredOffersType = {
-  [key: string]: FullOffer[];
+  [key: string]: ThumbnailOffer[];
 };
 
-function toStructureOffers(offers: FullOffer[]) {
+function toStructureOffers(offers: ThumbnailOffer[]) {
   const structuredOffers: StructuredOffersType = {};
 
   offers.map((offer) => {

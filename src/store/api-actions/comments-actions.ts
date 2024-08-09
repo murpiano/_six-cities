@@ -1,8 +1,8 @@
-import { APIRoute } from '../../../const';
-import { store } from '../../store';
-import { offersActions } from '../../slices/offers-slice/offers-slice';
-import { Comment } from '../../../types/comment-type';
-import { appCreateAsyncThunk } from '../../utils';
+import { APIRoute } from '../../const';
+import { store } from '../store';
+import { offersActions } from '../slices/offers-slice/offers-slice';
+import { Comment } from '../../types/comment-type';
+import { appCreateAsyncThunk } from '../utils';
 
 export const fetchGetCommentsAction = appCreateAsyncThunk<void, string>(
   'data/fetchComments',

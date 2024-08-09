@@ -6,10 +6,9 @@ import {
   activeSelectors,
 } from '../../store/slices/active-slice';
 import { MAX_NEARBY_OFFER_COUNT } from '../../const';
-import { fetchGetCommentsAction } from '../../store/api-actions/comments-actions/fetch-comments-action';
-import { fetchOfferAction } from '../../store/api-actions/offers-actions/fetch-offer-action';
-import { fetchOffersNearbyAction } from '../../store/api-actions/offers-actions/fetch-offers-nearby-action';
+import { fetchGetCommentsAction } from '../../store/api-actions/comments-actions';
 import { store } from '../../store/store';
+import { fetchOfferAction, fetchOffersNearbyAction } from '../../store/api-actions/offers-actions';
 
 type NeighboringProps = {
   nearbyOffers: ThumbnailOffer[];

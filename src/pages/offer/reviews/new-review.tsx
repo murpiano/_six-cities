@@ -1,12 +1,13 @@
 import { Fragment, useRef, useState } from 'react';
 import { RATING } from '../../../const';
 import { getStarsText } from '../utils';
-import { dispatch, store } from '../../../store/store';
+import { store } from '../../../store/store';
 import {
   fetchGetCommentsAction,
   fetchPostCommentsAction,
-} from '../../../store/api-actions/comments-actions/fetch-comments-action';
+} from '../../../store/api-actions/comments-actions';
 import { activeSelectors } from '../../../store/slices/active-slice';
+import { useAppDispatch } from '../../../hooks/store';
 
 type NewReviewProps = HTMLFormElement & {
   rating: HTMLInputElement;
@@ -21,6 +22,7 @@ export function NewReview() {
 
   const ratingRef = useRef<HTMLInputElement | null>(null);
   const commentRef = useRef<HTMLTextAreaElement | null>(null);
+  const dispatch = useAppDispatch();
 
   const handleFormInput = (evt: React.ChangeEvent<NewReviewProps>) => {
     const name = evt.target.name;

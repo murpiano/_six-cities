@@ -4,7 +4,7 @@ import { useAppSelector } from '../../hooks/store';
 import { favoritesOffers } from '../../store/slices/offers-slice/offers-selectors';
 import { userActions, userSelectors } from '../../store/slices/user-slice';
 import { dispatch } from '../../store/store';
-import { logoutAction } from '../../store/api-actions/auth-actions.ts/logout-action';
+import { logoutAction } from '../../store/api-actions/auth-actions';
 
 function IsLogged() {
   const userEmail = useAppSelector(userSelectors.userEmail);
