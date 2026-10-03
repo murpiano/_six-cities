@@ -3,8 +3,8 @@ import { Map, TileLayer } from 'leaflet';
 import type { Location } from './map-utils';
 
 enum MapSetting {
-  MapUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-  MapCopyright = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  MapUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  MapCopyright = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }
 
 function useMap(
