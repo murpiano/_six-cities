@@ -19,12 +19,14 @@ const defaultCustomIcon = new Icon({
   iconUrl: MapMarker.DefaultMarker,
   iconSize: [27, 40],
   iconAnchor: [15, 40],
+  shadowUrl: '',
 });
 
 const currentCustomIcon = new Icon({
   iconUrl: MapMarker.ActiveMarker,
   iconSize: [27, 40],
   iconAnchor: [15, 40],
+  shadowUrl: '',
 });
 
 const getLocation = (offers: FullOffer[]) => offers[0].city.location;
